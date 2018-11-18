@@ -22,14 +22,15 @@ const componentList = {
 const cx = classNames.bind(styles)
 
 export default class HouseMap extends Component {
-  renderComponent = (key, componentName, field, children) => {
+  buildComponent = (key, componentName, field, children) => {
     const { properties } = this.props
 
     const component = componentList[componentName]
+
     if (component) {
       return (React.createElement(
         component,
-        { [field]: properties[field], renderComponent: this.renderComponent, key },
+        { [field]: properties[field], buildComponent: this.buildComponent, key },
         children)
       )
     }
@@ -42,7 +43,7 @@ export default class HouseMap extends Component {
       <div className={cx('houseMap')}>
         {templateProperties.template.map(({ component, field, children }, idx) => {
           if (properties[field.toLowerCase()]) {
-            return this.renderComponent(idx, component, field, children)
+            return this.buildComponent(idx, component, field, children)
           }
         })}
       </div>

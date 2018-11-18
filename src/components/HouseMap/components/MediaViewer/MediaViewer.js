@@ -11,12 +11,12 @@ import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-export default function MediaViewer ({ images, renderComponent, children }) {
+export default function MediaViewer ({ images, buildComponent, children }) {
   return (
     <div className={cx('mediaViewer')}>
       {children &&
         <div className={cx('children')}>
-          {children.map(({ component, field }, idx) => renderComponent(idx, component, field))}
+          {children.map(({ component, field }, idx) => buildComponent(idx, component, field))}
         </div>
       }
       <Slider>
@@ -28,6 +28,6 @@ export default function MediaViewer ({ images, renderComponent, children }) {
 
 MediaViewer.propTypes = {
   images: PropTypes.array.isRequired,
-  renderComponent: PropTypes.func.isRequired,
+  buildComponent: PropTypes.func.isRequired,
   children: PropTypes.array
 }
