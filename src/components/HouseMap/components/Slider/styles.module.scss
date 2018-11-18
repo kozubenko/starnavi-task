@@ -7,12 +7,16 @@
   cursor: pointer;
 
   &:hover {
-    .buttons {
+    .buttonsWrapper {
       display: initial;
+    }
+
+    img {
+      transform: scale(1.1);
     }
   }
 
-  .buttons {
+  .buttonsWrapper {
     position: absolute;
     border-radius: 2px;
     height: 100%;
@@ -48,5 +52,17 @@
     border-radius: 10px;
     filter: sepia(0.5);
     margin: 0;
+    transition: 0.5s transform;
+    will-change: transform, scale;
+  }
+
+  @media all and (max-width: 620px) {
+    .buttonsWrapper {
+      display: initial;
+    }
+
+    img {
+      width: 270px;
+    }
   }
 }
