@@ -12,6 +12,6 @@ open http://localhost:3000/
 - redux
 - css-modules
 
-Implemented according to requirements from client.
+Deployed on HEROKU
 
-Mobile view is not implemented yet, no requirements.
+Link: https://starnavi-task.herokuapp.com/
