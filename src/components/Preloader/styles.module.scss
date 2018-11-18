@@ -1,0 +1,31 @@
+.preloader {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  margin: 0 auto;
+  border: 4px solid rgba(#99945A, 0.5);
+  border-left: 4px solid #99945A;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity .4s linear;
+  will-change: transform, opacity;
+  pointer-events: none;
+
+  &.is-active {
+    opacity: 1;
+    animation: preloader 1.1s infinite linear;
+  }
+}
+
+@keyframes preloader {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}

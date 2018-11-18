@@ -1,0 +1,13 @@
+.mediaViewer {
+  position: relative;
+
+  .children {
+    position: absolute;
+    z-index: 1;
+
+    p {
+      margin: 15px;
+      background: white;
+    }
+  }
+}

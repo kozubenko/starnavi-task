@@ -1,0 +1,28 @@
+.houseMap {
+  min-width: 500px;
+  background: #F5F5F5;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  p {
+    padding: 5px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    font-style: italic;
+    font-size: 14px;
+
+    &:hover {
+      background: darkgray;
+    }
+  }
+
+  * {
+    margin-bottom: 10px;
+  }
+}
