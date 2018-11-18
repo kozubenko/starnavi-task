@@ -1,0 +1,15 @@
+.mainLayout {
+  padding-top: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  .contentWrapper {
+    height: inherit;
+    max-width: 1000px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

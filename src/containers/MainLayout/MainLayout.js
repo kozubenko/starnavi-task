@@ -1,7 +1,20 @@
+// react
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
+// components
+import HouseMap from '../../components/HouseMap/HouseMap'
+import Preloader from '../../components/Preloader/Preloader';
+
+// redux
+import { connect } from 'react-redux'
 import { fetchInitialData } from '../../reducers'
+
+// styles
+import styles from './styles.module.scss'
+import classNames from 'classnames/bind'
+
+const cx = classNames.bind(styles)
 
 class MainLayout extends Component {
   componentDidMount () {
@@ -10,10 +23,28 @@ class MainLayout extends Component {
   }
 
   render () {
+    const { properties, templates, isLoading } = this.props
+
     return (
-      <div>Main Layout</div>
+      <div className={cx('mainLayout')}>
+        <Preloader isActive={isLoading}/>
+        <div className={cx('contentWrapper')}>
+          {
+            templates.map((template) => {
+              return properties.map((prop) => <HouseMap key={prop.id} properties={prop} templateProperties={template} />)
+            })
+          }
+        </div>
+      </div>
+
     )
   }
+}
+
+MainLayout.propTypes = {
+  properties: PropTypes.array.isRequired,
+  templates: PropTypes.array.isRequired,
+  isLoading: PropTypes.bool.isRequired
 }
 
 export default connect(
