@@ -14,7 +14,7 @@ export default class Slider extends Component {
     super(props)
 
     this.state = {
-      total: props.children.length,
+      total: Children.count(props.children),
       current: 0
     }
   }
@@ -44,7 +44,7 @@ export default class Slider extends Component {
     return (
       <div className={cx('slider')}>
         {total > 1 &&
-         (<div className={cx('buttons')}>
+         (<div className={cx('buttonsWrapper')}>
             <button className={cx('prevButton')} onClick={this.prevImage}>
               <i className={cx('fas fa-chevron-left')} /></button>
             <button className={cx('nextButton')} onClick={this.nextImage}>
