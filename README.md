@@ -1,7 +1,8 @@
 ### INSTRUCTIONS
 
-npm install
+create .env using env.sample
 
+npm install
 npm start
 
 open http://localhost:3000/

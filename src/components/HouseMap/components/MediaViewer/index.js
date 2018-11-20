@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // components
-import Slider from '../Slider/Slider'
+import Slider from '../Slider'
 
 // styles
 import styles from './styles.module.scss'
@@ -20,7 +20,7 @@ export default function MediaViewer ({ images, buildComponent, children }) {
         </div>
       }
       <Slider>
-        {images.map((source, idx) => (<img key={idx} src={source} />))}
+        {images.map((source, idx) => (<img key={idx} src={source} alt={source} />))}
       </Slider>
     </div>
   )

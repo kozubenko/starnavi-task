@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // components
-import Address from './components/Address/Address'
-import Price from './components/Price/Price'
-import Area from './components/Area/Area'
-import MediaViewer from './components/MediaViewer/MediaViewer'
+import Address from './components/Address'
+import Price from './components/Price'
+import Area from './components/Area'
+import MediaViewer from './components/MediaViewer'
 
 // styles
 import styles from './styles.module.scss'

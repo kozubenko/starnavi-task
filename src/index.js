@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
-import reducer from './reducers'
+import reducer from './reducers/rootReducer'
 import rootSaga from './sagas'
 
 // components
-import App from './containers/App/App.js'
+import App from 'containers/App'
 
 // styles
 import './index.css'
