@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 // styles
 import styles from './styles.module.scss'
 import classNames from 'classnames/bind'
-import Price from "../Price/Price";
 
 const cx = classNames.bind(styles)
 
@@ -58,6 +57,6 @@ export default class Slider extends Component {
   }
 }
 
-Price.propTypes = {
+Slider.propTypes = {
   children: PropTypes.array
 }

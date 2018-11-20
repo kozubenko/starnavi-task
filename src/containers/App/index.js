@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MainLayout from '../MainLayout/MainLayout'
+import MainLayout from '../MainLayout'
 
 export default class App extends Component {
   render () {

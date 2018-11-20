@@ -3,12 +3,12 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // components
-import HouseMap from '../../components/HouseMap/HouseMap'
-import Preloader from '../../components/Preloader/Preloader';
+import HouseMap from 'components/HouseMap'
+import Preloader from 'components/Preloader';
 
 // redux
 import { connect } from 'react-redux'
-import { fetchInitialData } from '../../reducers'
+import { fetchInitialData } from 'reducers/rootReducer'
 
 // styles
 import styles from './styles.module.scss'
